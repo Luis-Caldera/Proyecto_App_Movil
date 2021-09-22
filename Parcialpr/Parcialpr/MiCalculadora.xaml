@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcialpr.MiCalculadora"
+             Title="Mi calculadora"
+             BackgroundImageSource="fondo.png">
+    
+    <ContentPage.Content>
+        <StackLayout >
+            <Label Text=" " HorizontalOptions="Center" Margin="0,30,0,0" FontSize="19" TextColor="Blue"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="Número 1" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="0" FontSize="21" FontAttributes="Bold" TextColor="Red"/>
+                <Entry Keyboard="Numeric" x:Name="entNumero1" HorizontalTextAlignment="Center" Grid.Column="0" Grid.Row="1"/>
+                <Label Text="Número 2" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="0" FontSize="21" FontAttributes="Bold" TextColor="Green"/>
+                <Entry Keyboard="Numeric" x:Name="entNumero2" HorizontalTextAlignment="Center" Grid.Column="1" Grid.Row="1"/>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="+" x:Name="btnSuma" Grid.Column="0" Grid.Row="0" CornerRadius="20" FontSize="20"/>
+                <Button Text="-" x:Name="btnResta" Grid.Column="1" Grid.Row="0" CornerRadius="20" FontSize="20"/>
+                <Button Text="*" x:Name="btnMultiplicacion" Grid.Column="2" Grid.Row="0" CornerRadius="20" FontSize="20"/>
+                <Button Text="/" x:Name="btnDivision" Grid.Column="3" Grid.Row="0" CornerRadius="20" FontSize="20"/>
+            </Grid>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="^" x:Name="btnPotencia" Grid.Column="0" Grid.Row="0" FontSize="20" CornerRadius="20"/>
+                <Button Text="Raiz" x:Name="btnRaiz" Grid.Column="1" Grid.Row="0" FontSize="20" CornerRadius="20"/>
+                <Button Text="%" x:Name="btnPorcentaje" Grid.Column="2" Grid.Row="0" FontSize="20" CornerRadius="20"/>
+                
+            </Grid>
+
+            <Label x:Name="lblResultado" FontSize="Large" HorizontalTextAlignment="Center" Text="0.0"/>
+            <Button Text="Limpiar" x:Name="btnLimpiar" Grid.Column="3" Grid.Row="0" CornerRadius="20" FontSize="20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

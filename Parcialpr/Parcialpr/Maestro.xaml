@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcialpr.Maestro"
+             Title="Maestro"
+             BackgroundImageSource="fondo.png">
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame>
+                <Label Text="Menú" TextColor="Green" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Title"></Label>
+            </Frame>
+
+            <Button Text="Ir a Mi Calculadora"
+                    Clicked="IraMiCalculadora"
+                    Image="calculadora.png"
+                    CornerRadius="20"
+                    BackgroundColor="SlateGray"
+                    FontAttributes="Bold"/>
+            <Button Text="Ir a Paguemos"
+                    Clicked="IraPaguemos"
+                     Image="pago.png"
+                    CornerRadius="20"
+                    BackgroundColor="MediumOrchid"
+                    FontAttributes="Bold"/>
+            <Button Text="Ir a Mi temática"
+                    Clicked="IraMiTematica"
+                     Image="tema.png"
+                    CornerRadius="20"
+                    BackgroundColor="CadetBlue"
+                    FontAttributes="Bold"/>
+            <Button Text="Ir a Mis materiales"
+                    Clicked="IraMisMateriales"
+                     Image="papeleria.png"
+                    CornerRadius="20"
+                    BackgroundColor="RosyBrown"
+                    FontAttributes="Bold"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

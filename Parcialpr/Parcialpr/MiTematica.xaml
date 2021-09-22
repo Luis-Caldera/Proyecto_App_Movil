@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:controls="clr-namespace:Xamd.ImageCarousel.Forms.Plugin.Abstractions;assembly=Xamd.ImageCarousel.Forms.Plugin.Abstractions"
+             x:Class="Parcialpr.MiTematica"
+             Title="Mi temática" 
+             BackgroundImageSource="fondo.png">
+
+    <TabbedPage.Children/>
+
+    <ContentPage Title="Introducción"  Icon="intro.png">
+        <ScrollView>
+        <StackLayout >
+         
+            <Label Text="Imágenes seguridad informática" Padding="10,8,0,0" FontAttributes="Bold" FontSize="18" TextColor="Brown"/>
+            <Grid VerticalOptions="CenterAndExpand" RowDefinitions="350,Auto">
+                <CarouselView Margin="0" IsBounceEnabled="True" ItemsSource="{Binding UserCollection}"
+                              IndicatorView="indicatorView">
+                    <CarouselView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid HorizontalOptions="FillAndExpand">
+                                <Image Source="{Binding UserImage}" Aspect="AspectFill"
+                                       HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+                            </Grid>
+                        </DataTemplate>
+                    </CarouselView.ItemTemplate>
+                </CarouselView>
+                <IndicatorView Grid.Row="1" Margin="0,0,0,20" VerticalOptions="EndAndExpand" x:Name="indicatorView"
+                               IndicatorColor="Gray" SelectedIndicatorColor="Beige" HorizontalOptions="Center"/>
+            </Grid>
+            <StackLayout>
+                <Label Text="¿Qué es la seguridad informática?" FontSize="20" TextColor="Red"/>
+            </StackLayout>
+                <StackLayout>
+                    <Label Text=" Es el proceso de prevenir y detectar el uso no autorizado de un sistema informático. Implica el proceso de proteger contra intrusos el uso de nuestros recursos informáticos con intenciones maliciosas o con intención de obtener ganancias, o incluso la posibilidad de acceder a ellos por accidente."
+                HeightRequest="600"
+               FontSize="20"
+               HorizontalTextAlignment="Start"
+                HorizontalOptions="Center"
+               />
+                </StackLayout>
+            
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+
+
+    <ContentPage Title="Profundización"  Icon="ensenar.png" >
+        <ScrollView>
+        <Frame BorderColor="Black"
+       CornerRadius="5"
+       Padding="8">
+                <StackLayout  >
+                <Label Text="Servicio más relevante de la seguridad informática" FontSize="Title" FontAttributes="Bold" TextColor="Blue" Padding="20"/>
+                <StackLayout>
+                  
+                    <BoxView Color="Gray"
+             HeightRequest="2"
+             HorizontalOptions="Fill" />
+                    <Label Text=" La seguridad de la información vela por el buen funcionamiento de los datos de las empresas y la transmisión de información de unos usuarios a otros siempre que estén autorizados. Pero además gracias a esta seguridad garantizamos que todos los mensajes que se lleven a cabo los enviará un emisor acreditado y que los recibirá el receptor correspondiente sin ningún tipo de interrupciones." FontSize="18"/>
+                </StackLayout>
+
+                <Label Text="Aspectos fundamentales de la seguridad informática" FontSize="20" FontAttributes="Bold" TextColor="Green"/>
+                <Grid RowSpacing="10" ColumnSpacing="10" Padding="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Source="confidencial.png" Grid.Row="0" Grid.Column="0" Aspect="AspectFill"/>
+                    <Label Text="Confidencialidad" Grid.Column="2" Grid.Row="1" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="15" />
+                    <Image Source="inte.png" Grid.Row="0" Grid.Column="1" Aspect="AspectFill"/>
+                    <Label Text="Integridad" Grid.Column="0" Grid.Row="1" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="15"/>
+                    <Image Source="dispo.png" Grid.Row="0" Grid.Column="2" Aspect="AspectFill"/>
+                    <Label Text="Disponibilidad" Grid.Column="1" Grid.Row="1" FontAttributes="Bold" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" FontSize="15" />
+                       
+                    </Grid>
+
+                    <Label Text="La confidencialidad, integridad y disponibilidad, también conocida como la tríada de la CID (CIA Triad, en inglés), es un modelo diseñado para guiar las políticas de seguridad de la información dentro de una organización." HeightRequest="200" FontAttributes="Bold" FontSize="Body" Grid.Column="0"/>
+                    <Label Text="Objetivo de la seguridad informática"  FontAttributes="Italic" TextColor="Red" FontSize="20" VerticalOptions="Center" HorizontalOptions="Center" />
+                    <Label Text="El objetivo de la seguridad informática Colombia es fortalecer una o varias de las características de seguridad mitigando de esta forma los efectos producidos por las amenazas y las vulnerabilidades dentro de un sistema. No obstante, algo que debes tener presente es que el riesgo de sufrir un incidente de seguridad nunca lo vamos a poder eliminar por completo, pero sí vamos a reducirlo a un nivel tolerable." FontSize="20" VerticalOptions="Center" HorizontalOptions="Center"  />
+                    
+            </StackLayout>
+        </Frame>
+
+        </ScrollView>
+    </ContentPage>
+
+    
+    <ContentPage Title="Destacados"  Icon="msj.png">
+        <ScrollView>
+            <StackLayout  >
+            <Label Text="Ejemplos de seguridad informática" FontSize="Title" FontAttributes="Bold" TextColor="#F74625" Padding="20"/>
+            <Label Text="Copias de seguridad" TextColor="Chocolate" FontSize="23" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+            <Image Source="copias.jpg"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="600"
+              VerticalOptions="CenterAndExpand" />
+
+                <Label Text="Antivirus" TextColor="Chocolate" FontSize="23" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Image Source="antivirus.jpg"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="600"
+                VerticalOptions="CenterAndExpand"/>
+
+                <Label Text="Redes" TextColor="Chocolate" FontSize="23" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Image Source="redes.jpg"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="600"
+                VerticalOptions="CenterAndExpand"/>
+
+                <Label Text="Firewall" TextColor="Chocolate" FontSize="23" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Image Source="firewall.jpg"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="600"
+                VerticalOptions="CenterAndExpand"/>
+
+                <Label Text="Cibercriminología" TextColor="Chocolate" FontSize="23" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Image Source="crimi.jpg"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="600"
+                VerticalOptions="CenterAndExpand"/>
+
+                <Label Text="Biometría informática" TextColor="Chocolate" FontSize="23" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Image Source="Biome.jpg"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="600"
+                VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage>
+
+    <!--<ContentPage>
+        <StackLayout>
+            <Label Text="Antivirus" TextColor="Chocolate" FontSize="23"/>
+            <Image Source="antivirus.jpg"
+               HeightRequest="150"
+               HorizontalOptions="CenterAndExpand"
+               WidthRequest="600"
+                VerticalOptions="CenterAndExpand"/>
+        </StackLayout>
+    </ContentPage>-->
+
+</TabbedPage>

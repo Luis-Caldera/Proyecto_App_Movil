@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcialpr.Paguemos"
+             Title="Paguemos"
+             BackgroundImageSource="fondo.png">
+    
+    <ContentPage.Content>
+        <ScrollView>
+        <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill"  Padding="24">
+            <Label Text="Datos de pago."
+                   HorizontalTextAlignment="Center"
+                   FontSize="36"
+                   TextColor="Black"/>
+
+            <Label Text="Ingrese los respectivos datos:  " FontSize="Medium"
+               Grid.Row="1" Grid.Column="0" Padding="20"  FontAttributes="Bold"/>
+
+            <Label Text="Total cuenta"
+               VerticalOptions="Center"
+               TextColor="Red"
+                FontSize="Medium" />
+            <Entry x:Name="TotalCuenta" Keyboard="Numeric"
+             Placeholder="ingrese total cuenta" Grid.Row="2" Grid.Column="1" FontAttributes="Bold"/>
+
+            <Label Text="Número de integrantes"
+               VerticalOptions="Center"
+               TextColor="Red"
+                FontSize="Medium"/>
+            <Entry x:Name="NumeroIntegrantes" Keyboard="Numeric"
+             Placeholder="ingrese número de integrantes" Grid.Row="2" Grid.Column="1"  FontAttributes="Bold"/>
+
+            <Label Text="Porcentaje propina"
+               VerticalOptions="Center"
+               TextColor="Red"
+                FontSize="Medium"/>
+            <Entry x:Name="PorcentajePropina" Keyboard="Numeric"
+             Placeholder="ingrese porcentaje propina" Grid.Row="2" Grid.Column="1"  FontAttributes="Bold"/>
+
+            <Button x:Name="Calcular" Text="Calcular" Clicked="Calcular_Clicked" HorizontalOptions="Center" VerticalOptions="Center" Margin="30,30,30,30">
+
+            </Button>
+            
+
+
+            <Label Text="Valor de la propina: "
+               VerticalOptions="Center"
+               TextColor="Black"
+                FontSize="Medium" />
+
+            <Label x:Name="valorPropina"
+               VerticalOptions="Center"
+               TextColor="Green"
+                FontSize="Medium" />
+
+            <Label Text="Valor de la propina por integrantes: "
+               VerticalOptions="Center"
+               TextColor="Black"
+                FontSize="Medium" />
+
+            <Label x:Name="valorPropinaIntegrantes"
+               VerticalOptions="Center"
+               TextColor="Green"
+                FontSize="Medium" />
+
+            <Label Text="Total a pagar con propina: "
+               VerticalOptions="Center"
+               TextColor="Black"
+                FontSize="Medium" />
+
+            <Label x:Name="TotalValorPropina"
+               VerticalOptions="Center"
+               TextColor="Green"
+                FontSize="Medium" />
+
+            <Label Text="Total por Integrantes: "
+               VerticalOptions="Center"
+               TextColor="Black"
+                FontSize="Medium" />
+
+            <Label x:Name="TotalIntegrantes"
+               VerticalOptions="Center"
+               TextColor="Green"
+                FontSize="Medium" />
+
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

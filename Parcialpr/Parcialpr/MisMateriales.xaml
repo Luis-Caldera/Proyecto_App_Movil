@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Parcialpr.MisMateriales"
+             Title="Mis materiales"
+             BackgroundImageSource="fondo.png">
+
+
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Fill" HorizontalOptions="Fill"  Padding="24">
+
+
+            <Label Text="Tipo de material:"/>
+            <Entry x:Name="tipoMaterial"/>
+
+            <Label Text="Nombre del material:"/>
+            <Entry x:Name="nombreMaterial" />
+
+            <Label Text="Unidades:"/>
+            <Entry x:Name="unidades" Keyboard="Numeric" />
+
+            <Button Text="Guardar" 
+                    CornerRadius="5" 
+                    FontSize="Medium" 
+                    Clicked="guardarMateriales"/>
+
+            <SearchBar x:Name="busqueda" 
+                       TextChanged="busqueda_TextChanged">
+            </SearchBar>
+
+            <ListView x:Name="lista">
+                
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding TipoMaterial}" Grid.Column="0"/>
+                                <Label Text="{Binding NombreMaterial}"  Grid.Column="1"/>
+                                <Label Text="{Binding UnidadesDisponibles}" Grid.Column="2"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Volver al menú" Clicked="Button_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
